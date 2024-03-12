@@ -6,11 +6,16 @@ public class Conta {
     public String toString() {
         return "Numero: "+numero+"\nSaldo: "+saldo;
     }
-    public void debitoSaldo( double dSaldo){
-
+    public double debitoSaldo( double dSaldo){
+        dSaldo = saldo;
+        saldo = saldo + dSaldo;
+        return saldo;
     }
-    public void creditoSaldo(double cSaldo){
+    public double creditoSaldo(double cSaldo){
+        cSaldo = saldo;
+       saldo = saldo - cSaldo;
+       return saldo;
 
-    }
+    }}
 
-}
+
