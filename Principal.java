@@ -20,21 +20,22 @@ public class Principal {
 
 
             //Mostrando as informações dos clientes na tela chamando a ToString
-            JOptionPane.showMessageDialog(null,"Informações do cliente",cliente_01.toString(),JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(null,cliente_01.toString(),"Informações do cliente",JOptionPane.INFORMATION_MESSAGE);
 
             //Mostrando as informações da conta
-            JOptionPane.showMessageDialog(null,"Informações da conta",conta_01.toString(),JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(null,conta_01.toString(),"Informações da conta",JOptionPane.INFORMATION_MESSAGE);
 
-
-            JOptionPane.showInputDialog(null, "Informe quantos deseja debitar");
             //chamando o debitoSaldo e colocando saldo
-            conta_01.debitoSaldo(100.00);
+            conta_01.debitoSaldo = Integer.parseInt( JOptionPane.showInputDialog(null, "Informe quantos deseja debitar")) ;
 
-            System.out.println(conta_01.toString());
 
-            conta_01.creditoSaldo(1000);
+            JOptionPane.showMessageDialog(null,conta_01.toString(),"Informações da conta",JOptionPane.INFORMATION_MESSAGE);
 
-            System.out.println(conta_01.toString());
+
+            conta_01.creditoSaldo = Integer.parseInt(JOptionPane.showInputDialog(null, "Informe quantos deseja creditar"));
+
+
+            JOptionPane.showMessageDialog(null,conta_01.toString(),"Informações da conta",JOptionPane.INFORMATION_MESSAGE);
 
         }catch (NumberFormatException e){
             e.getStackTrace();
